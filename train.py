@@ -13,14 +13,14 @@ train_datagen = ImageDataGenerator(rescale=1 / 255, horizontal_flip=True, rotati
 test_datagen = ImageDataGenerator(rescale=1 / 255)
 batch_size = 16
 train_generator = train_datagen.flow_from_directory(
-    'train',
+    'kapi/train',
     target_size=(256, 256),
     batch_size=batch_size,
     classes=['pinger', 'other'],
     class_mode='categorical')
 
 test_generator = test_datagen.flow_from_directory(
-    'test',
+    'kapi/test',
     target_size=(256, 256),
     batch_size=batch_size,
     classes=['pinger', 'other', ],
@@ -78,4 +78,4 @@ tarihce = model.fit(
     validation_steps=20,
     verbose=1)
 
-model.save('model_v1.h5')
+model.save('model_kapi.h5')

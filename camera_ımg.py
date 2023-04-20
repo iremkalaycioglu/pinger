@@ -3,7 +3,7 @@ import time
 import numpy as np
 import tensorflow
 from tensorflow.keras.preprocessing import image
-model=tensorflow.keras.models.load_model('model_v1.h5')
+model=tensorflow.keras.models.load_model('model_kapi.h5')
 
 frameWidth = 256
 frameHeight = 256
