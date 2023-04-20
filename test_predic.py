@@ -1,8 +1,8 @@
 import numpy as np
 import tensorflow
 from tensorflow.keras.preprocessing import image
-model=tensorflow.keras.models.load_model('modelpp.h5')
-test_image=image.load_img('t1.png',target_size=(256,256))
+model=tensorflow.keras.models.load_model('model_v1.h5')
+test_image=image.load_img('t2.png',target_size=(256,256))
 test_image=np.expand_dims(test_image,axis=0)
 result=model.predict(test_image)
 
