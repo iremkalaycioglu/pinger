@@ -16,14 +16,14 @@ train_generator = train_datagen.flow_from_directory(
     'train',
     target_size=(256, 256),
     batch_size=batch_size,
-    classes=['Test', 'other'],
+    classes=['pinger', 'other'],
     class_mode='categorical')
 
 test_generator = test_datagen.flow_from_directory(
     'test',
     target_size=(256, 256),
     batch_size=batch_size,
-    classes=['Test', 'other', ],
+    classes=['pinger', 'other', ],
     class_mode='categorical')
 
 import tensorflow as tf
